@@ -1,0 +1,266 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    to top,
+    lightgrey 0%,
+    lightgrey 1%,
+    #e0e0e0 26%,
+    #efefef 48%,
+    #d9d9d9 75%,
+    #bcbcbc 100%
+  );
+
+  font-family: "Poppins", sans sans-serif;
+  height: 100%;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #2a9d8f;
+  width: 100%;
+}
+.logo {
+  color: ghostwhite;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+.nav-links a {
+  color: ghostwhite;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.nav-links li {
+  list-style: none;
+  width: 15vw;
+  margin: 15px;
+  padding: 15px;
+  text-align: center;
+}
+.nav-links li :hover {
+  background-color: #264653;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 8px;
+}
+.book {
+  margin: auto;
+  padding: 3rem;
+}
+.heading {
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.heading span {
+  font-size: 3.5rem;
+  background-color: #e9c46a;
+  color: #e76f51;
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+}
+.heading span.space {
+  background: none;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+.booking {
+  background-color: #f3d4ba;
+  padding: 80px;
+  box-shadow: 0px 8px 19px 0px rgba(0, 0, 0, 0.54);
+  border-radius: 0.5rem;
+  margin: auto;
+}
+.media {
+  width: 800px;
+  height: 600px;
+  padding-right: 2rem;
+}
+.image {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.inputBox {
+  padding: 0 0 1.5rem 0;
+}
+.inputBox input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.1rem solid grey;
+  font-size: 1rem;
+  color: rgb(107, 103, 103);
+  text-transform: none;
+}
+.inputBox h3 {
+  font-size: 1.5rem;
+  padding: 0.1rem 0;
+  color: grey;
+}
+.btn {
+  width: 100%;
+  padding: 1rem;
+  border: 0.2rem solid (#6b6969b0);
+  font-size: 1.7rem;
+  background-image: linear-gradient(
+    128.1deg,
+    rgba(42, 157, 143, 1) 20.3%,
+    rgb(240, 174, 120) 67.8%
+  );
+  border-radius: 10px;
+  color: rgb(77, 73, 73);
+  cursor: pointer;
+}
+
+/*media querries*/
+
+@media (max-width: 768px) {
+  nav {
+    width: 100vw;
+  }
+
+  nav > .logo {
+    display: none;
+  }
+  .nav-links {
+    justify-content: space-around;
+    width: 8vw;
+    justify-content: center;
+  }
+
+  .heading span {
+    font-size: 2.5rem;
+    margin: auto;
+  }
+  .heading span.space {
+    margin: 0;
+  }
+  .heading {
+    display: flex;
+    flex-direction: row;
+  }
+  .booking {
+    margin: auto;
+    height: fit-content;
+    margin-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  nav {
+    width: 100vw;
+  }
+  .heading span {
+    font-size: 1.5rem;
+  }
+  .booking {
+    margin: 0 40px 20px 40px;
+  }
+  .heading {
+    padding-left: 30px;
+  }
+  .media {
+    height: fit-content;
+  }
+}
+
+.modal-wrapper {
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.modal-wrapper.open {
+  opacity: 1;
+  z-index: 999;
+}
+
+.modal {
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 500px;
+  max-width: 95%;
+}
+.modal #location {
+  width: 300px;
+  height: 200px;
+  max-width: 60%;
+}
+.modal-header {
+  background: #2a9d8f;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.modal-body {
+  padding: 15px 20px;
+}
+
+.modal-body h4 {
+  margin: 0;
+  color: #33464e;
+}
+
+.modal-body p {
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  margin: 10px 0 0;
+  color: #33464e;
+}
+
+.modal-footer {
+  background-color: #f3d4ba;
+  padding: 15px 0;
+}
+#closeModalBtn {
+  border-radius: 5px;
+  color: white;
+  background-color: #2a9d8f;
+  box-shadow: none;
+  padding: 10px 20px 10px 20px;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+#departure,
+#trip,
+#countDown {
+  text-align: left;
+}
