@@ -70,7 +70,7 @@ Will generate the dist files and then start server at port 8081
 
 ## API
 
-The project uses geonames APIs [meaningcloud](http://geonames.org/).
+The project uses geonames APIs [geonames](http://geonames.org/).
 The project uses weatherbit APIs [weatherbit](https://www.weatherbit.io/).
 The project uses pixabay APIs [pixabay](https://pixabay.com/).
 
