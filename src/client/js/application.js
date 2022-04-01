@@ -3,10 +3,13 @@ const modal = document.getElementById('modal');
 
  
 
-closeBtn.addEventListener('click', () => {
-	modal.classList.remove('open');
-});
-const handleSubmit=async (event)=>{
+if(closeBtn){
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('open');
+    });
+}
+
+ async function handleSubmit (event){
     event.preventDefault()
     //get user inputs//
     const destination = document.getElementById('destination')

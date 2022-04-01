@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --forceExit   ",
     "start": "node src/server/index.js",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
-    
   },
   "keywords": [],
   "author": "Noura",
@@ -15,7 +14,7 @@
   "description": "",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",   
+    "express": "^4.17.1",
     "jest-fetch-mock": "^3.0.3",
     "meaning-cloud": "^1.1.10",
     "webpack": "^4.40.0",
@@ -39,6 +38,7 @@
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
+    "supertest": "^6.2.2",
     "terser-webpack-plugin": "^5.1.1",
     "webpack-dev-server": "^3.11.2",
     "workbox-webpack-plugin": "^6.1.5"

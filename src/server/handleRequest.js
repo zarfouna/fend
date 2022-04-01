@@ -1,7 +1,7 @@
 const fetch=require('node-fetch')
 const dotenv = require('dotenv');
 dotenv.config();
-const getTripInfo =async(tripInfo)=>{
+async function getTripInfo (tripInfo){
 const geoRequest=await fetch (
     `http://api.geonames.org/postalCodeLookupJSON?placename=${tripInfo.destination}&maxRows=1&username=${process.env.GEOUSERNAME}`
       )
